@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="fonts/Montserrat/stylesheet.css" />
+    <link rel="stylesheet" href="js/swiper-js/swiper-bundle.min.css" />
+    <title>MIDAS</title>
+  </head>
+  <body>
+    <img class="bg" src="./img/bg.png" alt="bg" />
+    <header class="header">
+      <div class="header__row">
+        <div class="header__logo">
+          <a href="#"><img src="./img/icons/Logo.svg" alt="logo" /></a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="#" class="header__link fire">АКЦІЇ</a></li>
+            <li class="header__item">
+              <a href="./catalog-warm.html" class="header__link arrow">ГАРЯЧЕ</a>
+              <div class="header__link-dropdown">
+                <a href="./catalog-warm.html">Гарячі страви</a>
+                <a href="./catalog-warm.html">Супи</a>
+                <a href="./catalog-warm.html">Хінкалі</a>
+              </div>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link arrow">ХОЛОДНЕ</a>
+              <div class="header__link-dropdown">
+                <a href="#">Холодні страви</a>
+                <a href="#">Лаваші</a>
+                <a href="#">Хінкалі</a>
+              </div>
+            </li>
+            <li class="header__item"><a href="#" class="header__link">СВІЖА випічка</a></li>
+            <li class="header__item"><a href="#" class="header__link">десерти</a></li>
+            <li class="header__item"><a href="#" class="header__link">напої</a></li>
+          </ul>
+        </nav>
+        <div class="header__utils">
+          <div class="header__search">
+            <a href="#" class="header__utils-link">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.10932 18.2186C14.1403 18.2186 18.2186 14.1402 18.2186 9.10931C18.2186 4.07838 14.1403 0 9.10932 0C4.07834 0 0 4.07838 0 9.10931C0 14.1402 4.07834 18.2186 9.10932 18.2186ZM9.10932 16.0752C12.9565 16.0752 16.0753 12.9565 16.0753 9.10931C16.0753 5.26212 12.9565 2.14337 9.10932 2.14337C5.26214 2.14337 2.14337 5.26212 2.14337 9.10931C2.14337 12.9565 5.26214 16.0752 9.10932 16.0752Z"
+                  fill="white"
+                />
+                <path
+                  d="M15.4475 13.9319L24 22.4844L22.4844 24L13.9319 15.4475L15.4475 13.9319Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="header__user">
+            <a href="#" class="header__utils-link">
+              <svg
+                width="15"
+                height="24"
+                viewBox="0 0 15 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.5 9.28132C4.98992 9.28132 2.93347 7.19149 2.93347 4.64066C2.96371 2.08983 4.98992 0 7.5 0C10.0101 0 12.0665 2.08983 12.0665 4.64066C12.0665 7.19149 10.0403 9.28132 7.5 9.28132ZM7.5 2.08983C6.10887 2.08983 4.98992 3.22695 4.98992 4.64066C4.98992 6.05437 6.10887 7.19149 7.5 7.19149C8.89113 7.19149 10.0101 6.05437 10.0101 4.64066C10.0101 3.22695 8.89113 2.08983 7.5 2.08983Z"
+                  fill="white"
+                />
+                <path
+                  d="M12.9738 24V18.2553C12.9738 15.182 10.5242 12.7234 7.53024 12.7234C4.50605 12.7234 2.08669 15.2128 2.08669 18.2553V24H0V18.2553C0 14.0449 3.35685 10.6336 7.5 10.6336C11.6431 10.6336 15 14.0449 15 18.2553V24H12.9738Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="header__cart">
+            <a href="#" class="header__utils-link">
+              <svg
+                width="27"
+                height="25"
+                viewBox="0 0 27 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.44457 25L1.6327 13.8197H0V7.50297H6.22844L9.2822 0L11.0358 0.682088L8.2542 7.53262H18.6853L15.9339 0.682088L17.6876 0L20.7413 7.50297H26.9698V13.8197H25.3371L22.5252 25H4.44457ZM21.0739 23.1613L23.4323 13.8493H3.56775L5.92609 23.1613H21.0739ZM25.0952 11.981V9.40095H1.90482V11.981H25.0952Z"
+                  fill="white"
+                />
+                <path d="M14.4523 15.3914H12.5475V22.064H14.4523V15.3914Z" fill="white" />
+                <path d="M18.0806 15.3914H16.1758V22.064H18.0806V15.3914Z" fill="white" />
+                <path d="M10.8242 15.3914H8.91936V22.064H10.8242V15.3914Z" fill="white" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="info">
+        <div class="container-right">
+          <div class="info__content">
+            <div class="info__content-text">
+              <p class="content-text__text">Доставка готової їжі з фермерських продуктів!</p>
+              <img src="./img/icons/dots-less.svg" alt="dost" />
+              <div class="content-text__box">
+                <a href="tel:+3808416729" class="content-text__tel">+(380) 84-16-72-912</a>
+                <a href="mailto:delivery@midas.rest" class="content-text__gmail">
+                  delivery@midas.rest
+                </a>
+              </div>
+            </div>
+            <div class="info__content-photo">
+              <img src="./img/first-slide.png" alt="img" />
+              <div class="info__content-order">
+                <p class="content-order__title">Стейк з лосося з овочами</p>
+                <p class="weight">250 г</p>
+                <p class="content-order__descr">
+                  Ніжний стейк з дикого лосося, просочений соком і ароматом легко обжарених
+                  фермерських овочів
+                </p>
+                <div class="order__box">
+                  <p class="order__price">600 ₴</p>
+                  <button class="order__add"></button>
+                </div>
+              </div>
+              <div class="dots-more__box">
+                <img class="dots-more" src="./img/icons/dots-more.svg" alt="dots" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <blockquote class="info_tiramisu-box">
+        <div class="info_tiramisu">
+          <img src="./img/tiramisu.png" alt="img" />
+          <div class="tiramisu__inner">
+            <p class="info_tiramisu-title">Тірамісу</p>
+            <p class="weight">420 г</p>
+            <div class="order__box">
+              <p class="order__price">150 ₴</p>
+              <button class="order__add"></button>
+            </div>
+          </div>
+        </div>
+      </blockquote>
+      <section class="popular">
+        <div class="container">
+          <h2 class="popular__title">Популярні страви</h2>
+          <div class="popular__content">
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/hachapuri.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Хачапурі по-аджарськи</p>
+              <p class="weight">430 г</p>
+              <p class="popular__content-descr">
+                Хачапурі "Лодочка" з начинкою з плавленого сиру сулугуні, яйця і масла.
+              </p>
+              <div class="order__box">
+                <p class="order__price">240 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/hincali.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Хінкалі традиційні(6 шт.)</p>
+              <p class="weight">350 г</p>
+              <p class="popular__content-descr">
+                Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
+              </p>
+              <div class="order__box">
+                <p class="old__price">350 ₴</p>
+                <p class="order__price">270 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/hincali-frid.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Хінкалі жарені(6 шт.)</p>
+              <p class="weight">350 г</p>
+              <p class="popular__content-descr">
+                Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
+              </p>
+              <div class="order__box">
+                <p class="old__price">380 ₴</p>
+                <p class="order__price">330 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/lanch.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Ланч низькокалорійний</p>
+              <p class="weight">450 г</p>
+              <p class="popular__content-descr">
+                Грецький йогурт з ягодами, 3 хінкалі традиційних, салат цезарь, пиріжки з качкою,
+                морс
+              </p>
+              <div class="order__box">
+                <p class="old__price">880 ₴</p>
+                <p class="order__price">670 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/hachapuri-megrelske.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Хачапурі по мегрельське</p>
+              <p class="weight">430 г</p>
+              <p class="popular__content-descr">
+                Неймовірно ароматний пляцок з сиром сулугуні всередині і ззовні
+              </p>
+              <div class="order__box">
+                <p class="order__price">270 ₴</p>
+                <button class="more-types">3 вида</button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/kotleta-potato.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Котлета з картофелем по селянськи</p>
+              <p class="weight">350 г</p>
+              <p class="popular__content-descr">
+                По сімейному рецепту: ніжне рублене м'ясо з екологічно чистими ферм...
+              </p>
+              <div class="order__box">
+                <p class="order__price">270 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/hachapuri.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Хачапурі по-аджарськи</p>
+              <p class="weight">430 г</p>
+              <p class="popular__content-descr">
+                Хачапурі "Лодочка" з начинкою з плавленого сиру сулугуні, яйця і масла.
+              </p>
+              <div class="order__box">
+                <p class="order__price">240 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/hincali.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Хінкалі традиційні(6 шт.)</p>
+              <p class="weight">350 г</p>
+              <p class="popular__content-descr">
+                Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
+              </p>
+              <div class="order__box">
+                <p class="old__price">350 ₴</p>
+                <p class="order__price">270 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/hincali-frid.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Хінкалі жарені(6 шт.)</p>
+              <p class="weight">350 г</p>
+              <p class="popular__content-descr">
+                Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
+              </p>
+              <div class="order__box">
+                <p class="old__price">380 ₴</p>
+                <p class="order__price">330 ₴</p>
+                <button class="more-types">3 вида</button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/lanch.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Ланч низькокалорійний</p>
+              <p class="weight">450 г</p>
+              <p class="popular__content-descr">
+                Грецький йогурт з ягодами, 3 хінкалі традиційних, салат цезарь, пиріжки з качкою,
+                морс
+              </p>
+              <div class="order__box">
+                <p class="old__price">880 ₴</p>
+                <p class="order__price">670 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/hachapuri-megrelske.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Хачапурі по мегрельське</p>
+              <p class="weight">430 г</p>
+              <p class="popular__content-descr">
+                Неймовірно ароматний пляцок з сиром сулугуні всередині і ззовні
+              </p>
+              <div class="order__box">
+                <p class="order__price">270 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+            <div class="popular__content-dish">
+              <a href="#" class="content-dish_img">
+                <span>Замовити</span>
+                <img src="./img/kotleta-potato.png" alt="img" />
+              </a>
+              <p class="popular-dish__title">Котлета з картофелем по селянськи</p>
+              <p class="weight">350 г</p>
+              <p class="popular__content-descr">
+                По сімейному рецепту: ніжне рублене м'ясо з екологічно чистими ферм...
+              </p>
+              <div class="order__box">
+                <p class="order__price">270 ₴</p>
+                <button class="order__add"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="menu">
+        <div class="container">
+          <div class="menu__content">
+            <div class="menu__content-box">
+              <div class="menu__title">Меню</div>
+              <div class="menu__btn">
+                <div class="swiper-button-prev">
+                  <img src="./img/icons/slider-next.svg" alt="prev" />
+                </div>
+                <div class="swiper-button-next">
+                  <img src="./img/icons/slider-next.svg" alt="next" />
+                </div>
+              </div>
+            </div>
+            <div class="menu__content-swiper">
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="menu__discount">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__discount-number">30%</p>
+                      <p class="menu__discount-text">АКЦІЇ</p>
+                      <p class="menu__discount-number">20%</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu__discount warm">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__text">Гарячі страви</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu__discount soap">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__text">Супи</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu__discount hinc">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__text">Хінкалі</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu__discount cold">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__text cold">Холодні закуски</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu__discount salat">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__text">Салати</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu__discount hinc">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__text">Хінкалі</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu__discount cold">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__text cold">Холодні закуски</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu__discount salat">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__text">Салати</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="menu__discount">
+                      <a href="#" class="menu__more-info">Більше іншормації</a>
+                      <p class="menu__discount-number">30%</p>
+                      <p class="menu__discount-text">АКЦІЇ</p>
+                      <p class="menu__discount-number">20%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <div class="footer__logo">
+            <img src="./img/icons/Logo.svg" alt="logo" />
+          </div>
+          <div class="footer__inner">
+            <nav class="footer__menu">
+              <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">Зворотній зв'язок</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Оплата</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Контакти</a></li>
+              </ul>
+            </nav>
+            <div class="footer__row-box">
+              <a href="tel:+3808416729" class="footer__row-tel">+(380) 84-16-72-912</a>
+              <a href="mailto:delivery@midas.rest" class="footer__row-gmail">
+                delivery@midas.rest
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__policy">
+          <p class="footer__privacy">© 2009–2019, ООО «MIDAS», офіційний сайт</p>
+          <div class="footer__policy-box">
+            <a href="#" class="footer__policy-policy">Політика конфіденційності та оферта</a>
+            <a href="#" class="footer__policy-user">Умови користувача</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/swiper-js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
