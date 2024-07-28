@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- <img class="bg-cart" src="./img/bg-cart.png" alt="bg" /> -->
       <header class="header">
         <div class="header__row">
           <div class="header__logo">
@@ -111,124 +112,83 @@
         </div>
       </header>
       <main class="main">
-        <section class="warm-dish">
-          <div class="container">
-            <div class="warm__inner">
-              <p class="warm__title">Теплі страви</p>
+        <section class="shopping-cart">
+          <div class="shopping-cart__content">
+            <div class="dish-card__box">
+              <div class="shopping-cart__box">
+                <p class="dish-card__title">Корзина</p>
+                <p id="shopping-cart__amount">6 шт</p>
+              </div>
               <div class="breadcrambs">
                 <a href="./index.html" class="main-page">Головна</a>
                 /
-                <a href="#" class="current-page">Теплі страви</a>
+                <a href="#" class="current-page">Корзина</a>
               </div>
-              <div class="warm__select">
-                <p class="sort">Сортувати:</p>
-                <div class="dropdown-sort">
-                  <button id="dropdownButton" class="sort-button">Вибрати категорію</button>
-                  <div id="dropdownMenu" class="dropdown-content">
-                    <button class="sort-option" data-value="high-price">По зростанню ціни</button>
-                    <button class="sort-option" data-value="low-price">По спаду ціни</button>
-                    <button class="sort-option" data-value="low-weight">Менша вага</button>
-                    <button class="sort-option" data-value="high-weight">Більша вага</button>
-                  </div>
+            </div>
+            <div class="for-pad">
+              <div class="shopping-cart__product">
+                <div class="cart__product-box">
+                  <p class="product-box__name">Страва:</p>
+                  <p class="product-box__price">Ціна:</p>
+                  <p class="product-box__amount">Кількість:</p>
+                  <p class="product-box__sum">Сума:</p>
                 </div>
               </div>
-              <div class="warm__content" id="foodContainer">
-                <div class="popular__content-dish" data-price="240" data-weight="430">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hachapuri.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хачапурі по-аджарськи</p>
-                  <p class="weight">430 г</p>
-                  <p class="popular__content-descr">
-                    Хачапурі "Лодочка" з начинкою з плавленого сиру сулугуні, яйця і масла.
-                  </p>
-                  <div class="order__box">
-                    <p class="order__price">240 ₴</p>
-                    <button class="more-types">3 вида</button>
+              <div class="shopping-cart__dish">
+                <div class="dish-card__product">
+                  <img src="./img/hachapuri.png" class="dish-card__product-img" alt="hinkali" />
+                  <div class="card__product-inner">
+                    <div class="product-inner__name-box">
+                      <p class="product-inner__name">Хачапурі по по-аджарськи</p>
+                      <p class="weight">80 г</p>
+                    </div>
+                    <p class="order__price">180 ₴</p>
+                    <div class="order-box-counter cart">
+                      <button class="box__counter-btn decrease">-</button>
+                      <span class="box__counter-number">1 шт</span>
+                      <button class="box__counter-btn increase">+</button>
+                    </div>
+                    <p class="order__price">180 ₴</p>
+                    <button class="delete__product">
+                      <img src="./img/icons/delete.svg" alt="delete" />
+                    </button>
                   </div>
                 </div>
-                <div class="popular__content-dish" data-price="270" data-weight="350">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hincali.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хінкалі традиційні(6 шт.)</p>
-                  <p class="weight">350 г</p>
-                  <p class="popular__content-descr">
-                    Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
-                  </p>
-                  <div class="order__box">
-                    <p class="old__price">350 ₴</p>
-                    <p class="order__price">270 ₴</p>
-                    <button class="order__add"></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="330" data-weight="350">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hincali-frid.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хінкалі жарені(6 шт.)</p>
-                  <p class="weight">350 г</p>
-                  <p class="popular__content-descr">
-                    Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
-                  </p>
-                  <div class="order__box">
-                    <p class="old__price">380 ₴</p>
-                    <p class="order__price">330 ₴</p>
-                    <button class="order__add"></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="670" data-weight="450">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/lanch.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Ланч низькокалорійний</p>
-                  <p class="weight">450 г</p>
-                  <p class="popular__content-descr">
-                    Грецький йогурт з ягодами, 3 хінкалі традиційних, салат цезарь, пиріжки з
-                    качкою, морс
-                  </p>
-                  <div class="order__box">
-                    <p class="old__price">880 ₴</p>
-                    <p class="order__price">670 ₴</p>
-                    <button class="order__add"></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="250" data-weight="430">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hachapuri-megrelske.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хачапурі по мегрельське</p>
-                  <p class="weight">430 г</p>
-                  <p class="popular__content-descr">
-                    Неймовірно ароматний пляцок з сиром сулугуні всередині і ззовні
-                  </p>
-                  <div class="order__box">
-                    <p class="order__price">250 ₴</p>
-                    <button class="order__add"></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="290" data-weight="350">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/kotleta-potato.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Котлета з картофелем по селянськи</p>
-                  <p class="weight">350 г</p>
-                  <p class="popular__content-descr">
-                    По сімейному рецепту: ніжне рублене м'ясо з екологічно чистими ферм...
-                  </p>
-                  <div class="order__box">
-                    <p class="order__price">290 ₴</p>
-                    <button class="order__add"></button>
+                <div class="dish-card__product">
+                  <img src="./img/hachapuri.png" class="dish-card__product-img" alt="hinkali" />
+                  <div class="card__product-inner">
+                    <div class="product-inner__name-box">
+                      <p class="product-inner__name">Хачапурі по по-аджарськи</p>
+                      <p class="weight">80 г</p>
+                    </div>
+                    <p class="order__price">180 ₴</p>
+                    <div class="order-box-counter cart">
+                      <button class="box__counter-btn decrease">-</button>
+                      <span class="box__counter-number">1 шт</span>
+                      <button class="box__counter-btn increase">+</button>
+                    </div>
+                    <p class="order__price">180 ₴</p>
+                    <button class="delete__product">
+                      <img src="./img/icons/delete.svg" alt="delete" />
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section class="promo">
+          <div class="promo__content">
+            <p class="promo__text">Використати промо</p>
+            <div class="promo__input-box">
+              <input type="text" />
+              <button class="check__promo">Використати</button>
+            </div>
+            <div class="promo__final">
+              <p class="final__sum-text">Всього до сплати:</p>
+              <p class="final__sum-number">111</p>
+            </div>
+            <button class="palce__order">Оформити заказ</button>
           </div>
         </section>
       </main>
