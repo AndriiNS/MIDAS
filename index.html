@@ -90,7 +90,7 @@
           </div>
           <div class="header__cart">
             <div id="cart-counter"></div>
-            <a href="#" class="header__utils-link">
+            <a href="./shopping-cart.html" class="header__utils-link">
               <svg
                 width="27"
                 height="25"
@@ -154,7 +154,12 @@
             <p class="weight">420 г</p>
             <div class="order__box">
               <p class="order__price">150 ₴</p>
-              <button class="order__add"></button>
+              <button
+                class="order__add"
+                data-name="Тірамісу"
+                data-price="420"
+                data-img="./img/tiramisu.png"
+              ></button>
             </div>
           </div>
         </div>
@@ -175,7 +180,12 @@
               </p>
               <div class="order__box">
                 <p class="order__price">240 ₴</p>
-                <button class="order__add"></button>
+                <button
+                  class="order__add"
+                  data-name="Хачапурі по-аджарськи"
+                  data-price="240"
+                  data-img="./img/hachapuri.png"
+                ></button>
               </div>
             </div>
             <div class="popular__content-dish">
@@ -472,6 +482,7 @@
         </div>
       </div>
     </footer>
+    <div class="popup">Додано до кошику</div>
     <script src="js/swiper-js/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
   </body>

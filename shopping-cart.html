@@ -9,7 +9,6 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- <img class="bg-cart" src="./img/bg-cart.png" alt="bg" /> -->
       <header class="header">
         <div class="header__row">
           <div class="header__logo">
@@ -134,47 +133,103 @@
                   <p class="product-box__sum">Сума:</p>
                 </div>
               </div>
-              <div class="shopping-cart__dish">
-                <div class="dish-card__product">
-                  <img src="./img/hachapuri.png" class="dish-card__product-img" alt="hinkali" />
-                  <div class="card__product-inner">
-                    <div class="product-inner__name-box">
-                      <p class="product-inner__name">Хачапурі по по-аджарськи</p>
-                      <p class="weight">80 г</p>
-                    </div>
-                    <p class="order__price">180 ₴</p>
-                    <div class="order-box-counter cart">
-                      <button class="box__counter-btn decrease">-</button>
-                      <span class="box__counter-number">1 шт</span>
-                      <button class="box__counter-btn increase">+</button>
-                    </div>
-                    <p class="order__price">180 ₴</p>
-                    <button class="delete__product">
-                      <img src="./img/icons/delete.svg" alt="delete" />
-                    </button>
-                  </div>
-                </div>
-                <div class="dish-card__product">
-                  <img src="./img/hachapuri.png" class="dish-card__product-img" alt="hinkali" />
-                  <div class="card__product-inner">
-                    <div class="product-inner__name-box">
-                      <p class="product-inner__name">Хачапурі по по-аджарськи</p>
-                      <p class="weight">80 г</p>
-                    </div>
-                    <p class="order__price">180 ₴</p>
-                    <div class="order-box-counter cart">
-                      <button class="box__counter-btn decrease">-</button>
-                      <span class="box__counter-number">1 шт</span>
-                      <button class="box__counter-btn increase">+</button>
-                    </div>
-                    <p class="order__price">180 ₴</p>
-                    <button class="delete__product">
-                      <img src="./img/icons/delete.svg" alt="delete" />
-                    </button>
-                  </div>
-                </div>
+              <div class="empty">
+                <p>Додайте щось до корзини, щоб зробити замовлення</p>
+                <p class="cart__empty">Ваша корзина пуста 😒</p>
               </div>
+              <div class="shopping-cart__dish" id="cart-items"></div>
             </div>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                const cartItemsContainer = document.getElementById("cart-items");
+                const finalSumNumber = document.querySelector(".final__sum-number");
+                const shoppingCartNumber = document.getElementById("cart-counter");
+
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                const renderCart = () => {
+                  cartItemsContainer.innerHTML = "";
+                  cart.forEach((item, index) => {
+                    const itemElement = document.createElement("div");
+                    itemElement.classList.add("dish-card__product");
+
+                    itemElement.innerHTML = `
+        <img src="${item.img}" class="dish-card__product-img" alt="${item.name}" />
+        <div class="card__product-inner">
+          <div class="product-inner__name-box">
+            <p class="product-inner__name">${item.name}</p>
+          </div>
+          <p class="order__price">${item.price} ₴</p>
+          <div class="order-box-counter cart">
+            <button class="box__counter-btn decrease" data-index="${index}">-</button>
+            <span class="box__counter-number">${item.quantity} шт</span>
+            <button class="box__counter-btn increase" data-index="${index}">+</button>
+          </div>
+          <p class="order__price">${item.price * item.quantity} ₴</p>
+          <button class="delete__product" data-index="${index}">
+            <img src="./img/icons/delete.svg" alt="delete" />
+          </button>
+        </div>
+      `;
+
+                    cartItemsContainer.appendChild(itemElement);
+                  });
+                  attachEventListeners();
+                  updateFinalSum();
+                  updateCartNumber();
+                };
+
+                const attachEventListeners = () => {
+                  const increaseButtons = document.querySelectorAll(".box__counter-btn.increase");
+                  const decreaseButtons = document.querySelectorAll(".box__counter-btn.decrease");
+                  const deleteButtons = document.querySelectorAll(".delete__product");
+
+                  increaseButtons.forEach((button) => {
+                    button.addEventListener("click", (event) => {
+                      const index = event.target.dataset.index;
+                      if (cart[index].quantity < 9) {
+                        cart[index].quantity += 1;
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        renderCart();
+                      }
+                    });
+                  });
+
+                  decreaseButtons.forEach((button) => {
+                    button.addEventListener("click", (event) => {
+                      const index = event.target.dataset.index;
+                      if (cart[index].quantity > 1) {
+                        cart[index].quantity -= 1;
+                        localStorage.setItem("cart", JSON.stringify(cart));
+                        renderCart();
+                      }
+                    });
+                  });
+
+                  deleteButtons.forEach((button) => {
+                    button.addEventListener("click", (event) => {
+                      const index = event.target.dataset.index;
+                      cart.splice(index, 1);
+                      localStorage.setItem("cart", JSON.stringify(cart));
+                      renderCart();
+                    });
+                  });
+                };
+                const updateCartNumber = () => {
+                  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                  shoppingCartNumber.textContent = totalItems;
+                  shoppingCartNumber.style.display = totalItems > 0 ? "block" : "none";
+                };
+                const updateFinalSum = () => {
+                  const totalSum = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                  finalSumNumber.textContent = `${totalSum} ₴`;
+                };
+
+                renderCart();
+              });
+            </script>
           </div>
         </section>
         <section class="promo">
@@ -186,7 +241,7 @@
             </div>
             <div class="promo__final">
               <p class="final__sum-text">Всього до сплати:</p>
-              <p class="final__sum-number">111</p>
+              <p class="final__sum-number"></p>
             </div>
             <button class="palce__order">Оформити заказ</button>
           </div>
