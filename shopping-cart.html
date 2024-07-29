@@ -184,6 +184,7 @@
                   const increaseButtons = document.querySelectorAll(".box__counter-btn.increase");
                   const decreaseButtons = document.querySelectorAll(".box__counter-btn.decrease");
                   const deleteButtons = document.querySelectorAll(".delete__product");
+                  const emptyCart = document.querySelector(".empty");
 
                   increaseButtons.forEach((button) => {
                     button.addEventListener("click", (event) => {
@@ -206,13 +207,19 @@
                       }
                     });
                   });
-
+                  const toggleEmptyCartText = () => {
+                    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                    if (emptyCart) {
+                      emptyCart.style.display = cart.length === 0 ? "block" : "none";
+                    }
+                  };
                   deleteButtons.forEach((button) => {
                     button.addEventListener("click", (event) => {
                       const index = event.target.dataset.index;
                       cart.splice(index, 1);
                       localStorage.setItem("cart", JSON.stringify(cart));
                       renderCart();
+                      toggleEmptyCartText();
                     });
                   });
                 };

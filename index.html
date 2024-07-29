@@ -485,5 +485,18 @@
     <div class="popup">Додано до кошику</div>
     <script src="js/swiper-js/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const shoppingCartNumber = document.getElementById("cart-counter");
+        const updateCartNumber = () => {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+          const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+          shoppingCartNumber.textContent = totalItems;
+          shoppingCartNumber.style.display = totalItems > 0 ? "block" : "none";
+        };
+
+        updateCartNumber();
+      });
+    </script>
   </body>
 </html>

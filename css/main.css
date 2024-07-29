@@ -1189,4 +1189,10 @@ header {
   margin-top: 2rem;
   color: #ffffff;
 }
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
 /*  */

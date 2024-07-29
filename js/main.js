@@ -115,18 +115,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const addToCartButtons = document.querySelectorAll(".order__add");
   const shoppingCartNumber = document.getElementById("cart-counter");
   const popup = document.querySelector(".popup");
-  // const
+  const emptyCart = document.querySelector(".empty");
+
   const showPopup = () => {
-    popup.classList.add("show");
-    setTimeout(() => {
-      popup.classList.remove("show");
-    }, 3000);
+    if (popup) {
+      popup.classList.add("show");
+      setTimeout(() => {
+        popup.classList.remove("show");
+      }, 3000);
+    }
   };
+
   const updateCartNumber = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-    shoppingCartNumber.textContent = totalItems;
-    shoppingCartNumber.style.display = totalItems > 0 ? "block" : "none";
+    if (shoppingCartNumber) {
+      shoppingCartNumber.textContent = totalItems;
+      shoppingCartNumber.style.display = totalItems > 0 ? "block" : "none";
+    }
+    toggleEmptyCartText();
+  };
+
+  const toggleEmptyCartText = () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (emptyCart) {
+      emptyCart.style.display = cart.length === 0 ? "block" : "none";
+    }
   };
 
   addToCartButtons.forEach((button) => {
