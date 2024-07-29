@@ -134,7 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const toggleEmptyCartText = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    emptyCart.style.display = cart.length === 0 ? "block" : "none";
+    if (emptyCart) {
+      emptyCart.style.display = cart.length === 0 ? "block" : "none";
+    }
   };
 
   const handleAddToCart = (name, price, img, weight, quantity) => {
