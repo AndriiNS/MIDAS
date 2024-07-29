@@ -126,7 +126,13 @@
             <div class="dish-card__inner">
               <div class="dish-card__order">
                 <p class="card__order-diference">Різновиди:</p>
-                <div class="card__order-box">
+                <div
+                  class="card__order-box"
+                  data-name="Жарені хінкалі з сиром"
+                  data-price="120"
+                  data-img="./img/dish-cart.png"
+                  data-weight="80"
+                >
                   <div class="order-box__info">
                     <p class="order-box__name">З сиром</p>
                     <p class="weight">80 г</p>
@@ -143,9 +149,15 @@
                 </div>
               </div>
               <div class="dish-card__order">
-                <div class="card__order-box">
+                <div
+                  class="card__order-box"
+                  data-name="Жарені хінкалі з м'ясом"
+                  data-price="150"
+                  data-img="./img/dish-cart.png"
+                  data-weight="80"
+                >
                   <div class="order-box__info">
-                    <p class="order-box__name">З сиром</p>
+                    <p class="order-box__name">З м'ясом</p>
                     <p class="weight">80 г</p>
                   </div>
                   <div class="order-box-counter">
@@ -154,28 +166,12 @@
                     <button class="box__counter-btn increase">+</button>
                   </div>
                   <div class="order-box__action">
-                    <p class="dish-card__price">120 ₴</p>
+                    <p class="dish-card__price">150 ₴</p>
                     <button class="order__add"></button>
                   </div>
                 </div>
               </div>
-              <div class="dish-card__order">
-                <div class="card__order-box">
-                  <div class="order-box__info">
-                    <p class="order-box__name">З сиром</p>
-                    <p class="weight">80 г</p>
-                  </div>
-                  <div class="order-box-counter">
-                    <button class="box__counter-btn decrease">-</button>
-                    <span class="box__counter-number">1 шт</span>
-                    <button class="box__counter-btn increase">+</button>
-                  </div>
-                  <div class="order-box__action">
-                    <p class="dish-card__price">120 ₴</p>
-                    <button class="order__add"></button>
-                  </div>
-                </div>
-              </div>
+
               <div class="dish-card__descr-box">
                 <p class="card__order-diference">Опис:</p>
                 <p class="dish-card__descr-text">
@@ -190,7 +186,7 @@
           <div class="also__title">З цією стравою також замовляють</div>
           <div class="also__content">
             <div class="popular__content-dish">
-              <a href="#" class="content-dish_img">
+              <a href="./dish-cart.html" class="content-dish_img">
                 <span>Замовити</span>
                 <img src="./img/lanch.png" alt="img" />
               </a>
@@ -203,11 +199,17 @@
               <div class="order__box">
                 <p class="old__price">880 ₴</p>
                 <p class="order__price">670 ₴</p>
-                <button class="order__add"></button>
+                <button
+                  class="order__add"
+                  data-name="Ланч низькокалорійний"
+                  data-price="450"
+                  data-img="./img/lanch.png"
+                  data-weight="670"
+                ></button>
               </div>
             </div>
             <div class="popular__content-dish">
-              <a href="#" class="content-dish_img">
+              <a href="./dish-cart.html" class="content-dish_img">
                 <span>Замовити</span>
                 <img src="./img/hachapuri-megrelske.png" alt="img" />
               </a>
@@ -218,11 +220,11 @@
               </p>
               <div class="order__box">
                 <p class="order__price">270 ₴</p>
-                <button class="more-types">3 вида</button>
+                <a href="./dish-cart.html" class="more-types">3 вида</a>
               </div>
             </div>
             <div class="popular__content-dish">
-              <a href="#" class="content-dish_img">
+              <a href="./dish-cart.html" class="content-dish_img">
                 <span>Замовити</span>
                 <img src="./img/kotleta-potato.png" alt="img" />
               </a>
@@ -233,7 +235,13 @@
               </p>
               <div class="order__box">
                 <p class="order__price">270 ₴</p>
-                <button class="order__add"></button>
+                <button
+                  class="order__add"
+                  data-name="Котлета з картофелем по селянськи"
+                  data-price="270"
+                  data-img="./img/kotleta-potato.png"
+                  data-weight="350"
+                ></button>
               </div>
             </div>
           </div>

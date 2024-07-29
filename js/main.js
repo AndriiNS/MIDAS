@@ -118,58 +118,64 @@ document.addEventListener("DOMContentLoaded", () => {
   const emptyCart = document.querySelector(".empty");
 
   const showPopup = () => {
-    if (popup) {
-      popup.classList.add("show");
-      setTimeout(() => {
-        popup.classList.remove("show");
-      }, 3000);
-    }
+    popup.classList.add("show");
+    setTimeout(() => {
+      popup.classList.remove("show");
+    }, 3000);
   };
 
   const updateCartNumber = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-    if (shoppingCartNumber) {
-      shoppingCartNumber.textContent = totalItems;
-      shoppingCartNumber.style.display = totalItems > 0 ? "block" : "none";
-    }
+    shoppingCartNumber.textContent = totalItems;
+    shoppingCartNumber.style.display = totalItems > 0 ? "block" : "none";
     toggleEmptyCartText();
   };
 
   const toggleEmptyCartText = () => {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    if (emptyCart) {
-      emptyCart.style.display = cart.length === 0 ? "block" : "none";
+    emptyCart.style.display = cart.length === 0 ? "block" : "none";
+  };
+
+  const handleAddToCart = (name, price, img, weight, quantity) => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingProductIndex = cart.findIndex((item) => item.name === name);
+    if (existingProductIndex !== -1) {
+      cart[existingProductIndex].quantity += quantity;
+    } else {
+      cart.push({ name, price, img, weight, quantity });
     }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartNumber();
+    showPopup();
   };
 
   addToCartButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
-      const name = event.target.dataset.name;
-      const price = event.target.dataset.price;
-      const img = event.target.dataset.img;
+      const isOrderBox = button.closest(".card__order-box");
+      let name, price, img, weight, quantity;
 
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-      const product = {
-        name,
-        price,
-        img,
-        quantity: 1
-      };
-
-      const existingProductIndex = cart.findIndex((item) => item.name === name);
-      if (existingProductIndex !== -1) {
-        cart[existingProductIndex].quantity += 1;
+      if (isOrderBox) {
+        // Обробка для блоків з вибором кількості
+        const orderBox = isOrderBox;
+        name = orderBox.dataset.name;
+        price = parseFloat(orderBox.querySelector(".dish-card__price").textContent);
+        img = orderBox.dataset.img;
+        weight = orderBox.dataset.weight;
+        quantity = parseInt(orderBox.querySelector(".box__counter-number").textContent);
       } else {
-        cart.push(product);
+        // Обробка для основних блоків
+        name = button.dataset.name;
+        price = parseFloat(button.dataset.price);
+        img = button.dataset.img;
+        weight = button.dataset.weight;
+        quantity = 1; // Задаємо кількість як 1 для основного блоку
       }
 
-      localStorage.setItem("cart", JSON.stringify(cart));
-      updateCartNumber();
-      showPopup();
+      handleAddToCart(name, price, img, weight, quantity);
     });
   });
 
+  toggleEmptyCartText();
   updateCartNumber();
 });
