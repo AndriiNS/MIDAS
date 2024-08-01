@@ -111,163 +111,30 @@
         </div>
       </header>
       <main class="main">
-        <section class="warm-dish">
-          <div class="container">
-            <div class="warm__inner">
-              <p class="warm__title">Теплі страви</p>
-              <div class="breadcrambs">
-                <a href="./index.html" class="main-page">Головна</a>
-                /
-                <a href="#" class="current-page">Теплі страви</a>
-              </div>
-              <div class="warm__select">
-                <p class="sort">Сортувати:</p>
-                <div class="dropdown-sort">
-                  <button id="dropdownButton" class="sort-button">Вибрати категорію</button>
-                  <div id="dropdownMenu" class="dropdown-content">
-                    <button class="sort-option" data-value="high-price">По зростанню ціни</button>
-                    <button class="sort-option" data-value="low-price">По спаду ціни</button>
-                    <button class="sort-option" data-value="low-weight">Менша вага</button>
-                    <button class="sort-option" data-value="high-weight">Більша вага</button>
-                  </div>
-                </div>
-              </div>
-              <div class="warm__content" id="foodContainer">
-                <div class="popular__content-dish" data-price="240" data-weight="430">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hachapuri.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хачапурі по-аджарськи</p>
-                  <p class="weight">430 г</p>
-                  <p class="popular__content-descr">
-                    Хачапурі "Лодочка" з начинкою з плавленого сиру сулугуні, яйця і масла.
-                  </p>
-                  <div class="order__box">
-                    <p class="order__price">240 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Хачапурі по-аджарськи"
-                      data-price="240"
-                      data-img="./img/hachapuri.png"
-                      data-weight="430"
-                    ></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="270" data-weight="350">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hincali.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хінкалі традиційні(6 шт.)</p>
-                  <p class="weight">350 г</p>
-                  <p class="popular__content-descr">
-                    Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
-                  </p>
-                  <div class="order__box">
-                    <p class="old__price">350 ₴</p>
-                    <p class="order__price">270 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Хінкалі традиційні(6 шт.)"
-                      data-price="270"
-                      data-img="./img/hincali.png"
-                      data-weight="350"
-                    ></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="330" data-weight="350">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hincali-frid.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хінкалі жарені(6 шт.)</p>
-                  <p class="weight">350 г</p>
-                  <p class="popular__content-descr">
-                    Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
-                  </p>
-                  <div class="order__box">
-                    <p class="old__price">380 ₴</p>
-                    <p class="order__price">330 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Хінкалі жарені(6 шт.)"
-                      data-price="330"
-                      data-img="./img/hincali-frid.png"
-                      data-weight="350"
-                    ></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="670" data-weight="450">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/lanch.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Ланч низькокалорійний</p>
-                  <p class="weight">450 г</p>
-                  <p class="popular__content-descr">
-                    Грецький йогурт з ягодами, 3 хінкалі традиційних, салат цезарь, пиріжки з
-                    качкою, морс
-                  </p>
-                  <div class="order__box">
-                    <p class="old__price">880 ₴</p>
-                    <p class="order__price">670 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Ланч низькокалорійний"
-                      data-price="450"
-                      data-img="./img/lanch.png"
-                      data-weight="670"
-                    ></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="250" data-weight="430">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/kotleta-potato.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Котлета з картофелем по селянськи</p>
-                  <p class="weight">430 г</p>
-                  <p class="popular__content-descr">
-                    По сімейному рецепту: ніжне рублене м'ясо з екологічно чистими ферм...
-                  </p>
-                  <div class="order__box">
-                    <p class="order__price">250 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Котлета з картофелем по селянськи"
-                      data-price="270"
-                      data-img="./img/kotleta-potato.png"
-                      data-weight="350"
-                    ></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="290" data-weight="350">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hachapuri-megrelske.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хачапурі по мегрельське</p>
-                  <p class="weight">350 г</p>
-                  <p class="popular__content-descr">
-                    Неймовірно ароматний пляцок з сиром сулугуні всередині і ззовні
-                  </p>
-                  <div class="order__box">
-                    <p class="order__price">290 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Котлета з картофелем по селянськи"
-                      data-price="270"
-                      data-img="./img/kotleta-potato.png"
-                      data-weight="350"
-                    ></button>
-                  </div>
-                </div>
-              </div>
+        <section class="feetback">
+          <img class="feetback__img-right" src="./img/feetback1.png" alt="img" />
+          <div class="dish-card__box">
+            <p class="dish-card__title">Зворотній зв'язок</p>
+            <div class="breadcrambs">
+              <a href="./index.html" class="main-page">Головна</a>
+              /
+              <a href="#" class="current-page">Зворотній зв'язок</a>
             </div>
           </div>
+          <form class="feetback__form" action="#">
+            <div class="textarea__box">
+              <p>Ваше запитання, відгук або побажання:</p>
+              <textarea name="feetback_text" id="feetback" required></textarea>
+            </div>
+            <div class="gmail__box">
+              <p>Email дял отримання відповіді:</p>
+              <input type="email" name="user_gmail" required />
+            </div>
+            <button type="submit" class="feetback__btn">Відправити</button>
+          </form>
         </section>
       </main>
+      <img class="feetback__img-bottom" src="./img/feetback2.png" alt="img" />
       <footer class="footer">
         <div class="footer__row">
           <div class="footer__logo">
@@ -277,7 +144,7 @@
             <nav class="footer__menu">
               <ul class="footer__list">
                 <li class="footer__item">
-                  <a href="./feetback.html" class="footer__link">Зворотній зв'язок</a>
+                  <a href="#" class="footer__link">Зворотній зв'язок</a>
                 </li>
                 <li class="footer__item"><a href="#" class="footer__link">Оплата</a></li>
                 <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
@@ -300,8 +167,8 @@
           </div>
         </div>
       </footer>
-      <div class="popup">Додано до кошику</div>
     </div>
+    <div class="popup">Додано до кошику</div>
     <div class="policy-popup">
       <h2 class="policy-popup__title">Політи конфіденційності</h2>
       <button class="policy-popup__close-btn">&times;</button>

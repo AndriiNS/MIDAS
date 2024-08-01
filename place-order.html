@@ -111,159 +111,105 @@
         </div>
       </header>
       <main class="main">
-        <section class="warm-dish">
-          <div class="container">
-            <div class="warm__inner">
-              <p class="warm__title">Теплі страви</p>
-              <div class="breadcrambs">
-                <a href="./index.html" class="main-page">Головна</a>
-                /
-                <a href="#" class="current-page">Теплі страви</a>
-              </div>
-              <div class="warm__select">
-                <p class="sort">Сортувати:</p>
-                <div class="dropdown-sort">
-                  <button id="dropdownButton" class="sort-button">Вибрати категорію</button>
-                  <div id="dropdownMenu" class="dropdown-content">
-                    <button class="sort-option" data-value="high-price">По зростанню ціни</button>
-                    <button class="sort-option" data-value="low-price">По спаду ціни</button>
-                    <button class="sort-option" data-value="low-weight">Менша вага</button>
-                    <button class="sort-option" data-value="high-weight">Більша вага</button>
-                  </div>
+        <section class="place-order">
+          <div class="dish-card__box">
+            <p class="dish-card__title">Оформлення заказу</p>
+            <div class="breadcrambs">
+              <a href="./index.html" class="main-page">Головна</a>
+              /
+              <a href="./shopping-cart.html" class="main-page">Кошик</a>
+              /
+              <a href="#" class="current-page">Оформлення заказу</a>
+            </div>
+          </div>
+          <div class="place-order__content">
+            <form class="order__form">
+              <p class="form-punkt">01. Контактні данні</p>
+              <div class="form__data-box">
+                <div class="data-box__name">
+                  <label for="name">Ім'я <span class="required">*</span></label>
+                  <input type="text" name="name" required />
+                </div>
+                <div class="data-box__name">
+                  <label for="phone">Телефон <span class="required">*</span></label>
+                  <input type="number" name="phone" required />
+                </div>
+                <div class="data-box__name">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" />
                 </div>
               </div>
-              <div class="warm__content" id="foodContainer">
-                <div class="popular__content-dish" data-price="240" data-weight="430">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hachapuri.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хачапурі по-аджарськи</p>
-                  <p class="weight">430 г</p>
-                  <p class="popular__content-descr">
-                    Хачапурі "Лодочка" з начинкою з плавленого сиру сулугуні, яйця і масла.
-                  </p>
-                  <div class="order__box">
-                    <p class="order__price">240 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Хачапурі по-аджарськи"
-                      data-price="240"
-                      data-img="./img/hachapuri.png"
-                      data-weight="430"
-                    ></button>
+              <p class="form-punkt">02. Способи доставки</p>
+              <div class="form__delivery-box">
+                <div class="delivery-box__inner">
+                  <div class="delivery-box__home active">
+                    <div class="box-home__inner">
+                      <p class="home__inner-title">Безконтактна доставка</p>
+                      <span class="home__inner-price">150 ₴</span>
+                    </div>
+                    <p class="box__home-text">
+                      Доставка в районі центра вашого міста. Виконується кожного дня від 10:00 до
+                      22:00. Діапазон очікування від 1 години до 1.5 години
+                    </p>
+                  </div>
+                  <div class="delivery-box__alley">
+                    <div class="box-home__inner">
+                      <p class="home__inner-title">Самовивіз</p>
+                      <span class="home__inner-price">0 ₴</span>
+                    </div>
+                    <p class="box__home-text">
+                      Доступний з 10:00 до 22:00 По адресі
+                      <span class="alley">Вигадана вулиця 4\2</span>
+                    </p>
                   </div>
                 </div>
-                <div class="popular__content-dish" data-price="270" data-weight="350">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hincali.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хінкалі традиційні(6 шт.)</p>
-                  <p class="weight">350 г</p>
-                  <p class="popular__content-descr">
-                    Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
-                  </p>
-                  <div class="order__box">
-                    <p class="old__price">350 ₴</p>
-                    <p class="order__price">270 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Хінкалі традиційні(6 шт.)"
-                      data-price="270"
-                      data-img="./img/hincali.png"
-                      data-weight="350"
-                    ></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="330" data-weight="350">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hincali-frid.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хінкалі жарені(6 шт.)</p>
-                  <p class="weight">350 г</p>
-                  <p class="popular__content-descr">
-                    Пряні хінкалі з начинкою із ароматної баранини зі спеціями.
-                  </p>
-                  <div class="order__box">
-                    <p class="old__price">380 ₴</p>
-                    <p class="order__price">330 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Хінкалі жарені(6 шт.)"
-                      data-price="330"
-                      data-img="./img/hincali-frid.png"
-                      data-weight="350"
-                    ></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="670" data-weight="450">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/lanch.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Ланч низькокалорійний</p>
-                  <p class="weight">450 г</p>
-                  <p class="popular__content-descr">
-                    Грецький йогурт з ягодами, 3 хінкалі традиційних, салат цезарь, пиріжки з
-                    качкою, морс
-                  </p>
-                  <div class="order__box">
-                    <p class="old__price">880 ₴</p>
-                    <p class="order__price">670 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Ланч низькокалорійний"
-                      data-price="450"
-                      data-img="./img/lanch.png"
-                      data-weight="670"
-                    ></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="250" data-weight="430">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/kotleta-potato.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Котлета з картофелем по селянськи</p>
-                  <p class="weight">430 г</p>
-                  <p class="popular__content-descr">
-                    По сімейному рецепту: ніжне рублене м'ясо з екологічно чистими ферм...
-                  </p>
-                  <div class="order__box">
-                    <p class="order__price">250 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Котлета з картофелем по селянськи"
-                      data-price="270"
-                      data-img="./img/kotleta-potato.png"
-                      data-weight="350"
-                    ></button>
-                  </div>
-                </div>
-                <div class="popular__content-dish" data-price="290" data-weight="350">
-                  <a href="./dish-cart.html" class="content-dish_img">
-                    <span>Замовити</span>
-                    <img src="./img/hachapuri-megrelske.png" alt="img" />
-                  </a>
-                  <p class="popular-dish__title">Хачапурі по мегрельське</p>
-                  <p class="weight">350 г</p>
-                  <p class="popular__content-descr">
-                    Неймовірно ароматний пляцок з сиром сулугуні всередині і ззовні
-                  </p>
-                  <div class="order__box">
-                    <p class="order__price">290 ₴</p>
-                    <button
-                      class="order__add"
-                      data-name="Котлета з картофелем по селянськи"
-                      data-price="270"
-                      data-img="./img/kotleta-potato.png"
-                      data-weight="350"
-                    ></button>
+                <div class="delivery-box__form">
+                  <p class="box__form-alley">Адрес доставки</p>
+                  <div class="box__form-inner">
+                    <div class="form__inner-alley">
+                      <label for="alley">Вулиця</label>
+                      <input type="text" name="alley" required />
+                    </div>
+                    <div class="form__inner-house">
+                      <div>
+                        <label for="house">Будинок</label>
+                        <input type="text" name="house" required />
+                      </div>
+                      <div>
+                        <label for="alley">Квартира</label>
+                        <input type="text" name="alley" required />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+              <p class="form-punkt">03. Оплата</p>
+              <div class="form__payment-box">
+                <div class="payment-box__kuryer">
+                  <div class="sircle-ratio active"></div>
+                  <div class="box__card-inner">
+                    <p class="card-inner__text">Банківські карти / Електронні карти / Інше</p>
+                    <div class="card-inner__img">
+                      <img src="./img/applePay.png" alt="aplepay" />
+                      <img src="./img/mastercard.png" alt="mastercard" />
+                      <img src="./img/visa.png" alt="visa" />
+                      <img src="./img/googlePay.png" alt="googlePay" />
+                    </div>
+                  </div>
+                </div>
+                <div class="payment-box__kuryer">
+                  <div class="sircle-ratio"></div>
+                  <p class="card-inner__text">Грошима кур'єру</p>
+                </div>
+                <div class="payment-box__kuryer">
+                  <div class="sircle-ratio"></div>
+                  <p class="card-inner__text">Картою кур'єру</p>
+                </div>
+              </div>
+              <button class="order__final">Підтвердити заказ</button>
+            </form>
+            <div class="final__order-inner">
+              <div class="final__order"></div>
             </div>
           </div>
         </section>
@@ -277,7 +223,7 @@
             <nav class="footer__menu">
               <ul class="footer__list">
                 <li class="footer__item">
-                  <a href="./feetback.html" class="footer__link">Зворотній зв'язок</a>
+                  <a href="#" class="footer__link">Зворотній зв'язок</a>
                 </li>
                 <li class="footer__item"><a href="#" class="footer__link">Оплата</a></li>
                 <li class="footer__item"><a href="#" class="footer__link">Доставка</a></li>
@@ -300,7 +246,6 @@
           </div>
         </div>
       </footer>
-      <div class="popup">Додано до кошику</div>
     </div>
     <div class="policy-popup">
       <h2 class="policy-popup__title">Політи конфіденційності</h2>
