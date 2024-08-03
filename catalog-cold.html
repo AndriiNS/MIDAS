@@ -26,11 +26,11 @@
                 </div>
               </li>
               <li class="header__item">
-                <a href="#" class="header__link arrow">ХОЛОДНЕ</a>
+                <a href="./catalog-cold.html" class="header__link arrow">ХОЛОДНЕ</a>
                 <div class="header__link-dropdown">
-                  <a href="#">Холодні страви</a>
-                  <a href="#">Лаваші</a>
-                  <a href="#">Хінкалі</a>
+                  <a href="./catalog-cold.html">Холодні страви</a>
+                  <a href="./catalog-cold.html">Лаваші</a>
+                  <a href="./catalog-cold.html">Хінкалі</a>
                 </div>
               </li>
               <li class="header__item">
@@ -43,6 +43,9 @@
                 <a href="./catalog-drink.html" class="header__link">напої</a>
               </li>
             </ul>
+            <button class="mobile-nav-btn">
+              <div class="nav-icon"></div>
+            </button>
           </nav>
           <div class="header__utils">
             <div class="header__search">
@@ -88,7 +91,7 @@
               </a>
             </div>
             <div class="header__cart">
-              <div id="cart-counter">1</div>
+              <div id="cart-counter"></div>
               <a href="./shopping-cart.html" class="header__utils-link">
                 <svg
                   width="27"
@@ -110,6 +113,55 @@
           </div>
         </div>
       </header>
+      <div class="mobile-nav baken">
+        <div class="mobile-nav__discount">
+          <p class="discount__number">30%</p>
+          <a href="#" class="header__link fire">АКЦІЇ</a>
+          <p class="discount__number">20%</p>
+        </div>
+        <div class="mobile-nav__hot">
+          <p class="nav__hot">Гаряче:</p>
+          <div class="nav__hot-box">
+            <div>
+              <img src="./img/mobile-hot-dish.png" alt="img" />
+              <a href="./catalog-warm.html" class="hot-box__name">Гарячі страви</a>
+            </div>
+            <div>
+              <img src="./img/mobile-sup-dish.png" alt="img" />
+              <a href="./catalog-warm.html" class="hot-box__name">Супи</a>
+            </div>
+            <div>
+              <img src="./img/mobile-hinc-dish.png" alt="img" />
+              <a href="./catalog-warm.html" class="hot-box__name">Хінкалі</a>
+            </div>
+            <div>
+              <img class="hot-bread" src="./img/mobile-bread-dish.png" alt="img" />
+              <a href="./catalog-baken.html" class="hot-box__name">Свіжа випічка</a>
+            </div>
+            <div>
+              <img src="./img/mobile-desert-dish.png" alt="img" />
+              <a href="./catalog-desert.html" class="hot-box__name">Десерти</a>
+            </div>
+            <div>
+              <img src="./img/mobile-drink-dish.png" alt="img" />
+              <a href="./catalog-drink.html" class="hot-box__name">Напої</a>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-nav__cold">
+          <p class="nav__hot">Холодне:</p>
+          <div class="nav__cold-inner">
+            <div>
+              <img src="./img/mobile-cold-dish.png" alt="img" />
+              <a href="./catalog-cold.html">Холодні закуски</a>
+            </div>
+            <div>
+              <img src="./img/mobile-salat-dish.png" alt="img" />
+              <a href="./catalog-cold.html">Салати</a>
+            </div>
+          </div>
+        </div>
+      </div>
       <main class="main">
         <section class="warm-dish">
           <div class="container">

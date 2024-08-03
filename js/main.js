@@ -1,12 +1,40 @@
-window.onscroll = function () {
+//========================================================================================================================================================
+function mobileNav() {
+  const navBtn = document.querySelector(".mobile-nav-btn");
+  const nav = document.querySelector(".mobile-nav");
+  const menuIcon = document.querySelector(".nav-icon");
   const header = document.querySelector(".header");
 
-  if (window.scrollY > 10) {
-    header.classList.add("scroll");
-  } else {
-    header.classList.remove("scroll");
-  }
-};
+  // Відстеження, чи користувач проскролив сторінку
+  let userScrolled = false;
+
+  window.onscroll = function () {
+    if (window.scrollY > 10) {
+      header.classList.add("scroll");
+      userScrolled = true;
+    } else {
+      header.classList.remove("scroll");
+      userScrolled = false;
+    }
+  };
+
+  navBtn.onclick = function () {
+    nav.classList.toggle("mobile-nav--open");
+    menuIcon.classList.toggle("nav-icon--active");
+    document.body.classList.toggle("no-scroll");
+
+    if (!userScrolled) {
+      if (nav.classList.contains("mobile-nav--open")) {
+        header.classList.add("scroll");
+      } else {
+        header.classList.remove("scroll");
+      }
+    }
+  };
+}
+
+document.addEventListener("DOMContentLoaded", mobileNav);
+
 //========================================================================================================================================================
 document.addEventListener("DOMContentLoaded", () => {
   // Check if Swiper is defined
@@ -25,6 +53,23 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       scrollbar: {
         el: ".swiper-scrollbar"
+      },
+      breakpoints: {
+        // when window width is >= 0px and < 760px
+        0: {
+          slidesPerView: 3,
+          spaceBetween: 10
+        },
+        // when window width is >= 760px and < 967px
+        760: {
+          slidesPerView: 3.2,
+          spaceBetween: 20
+        },
+        // when window width is >= 967px
+        967: {
+          slidesPerView: 6.2,
+          spaceBetween: 20
+        }
       }
     });
   }
@@ -315,5 +360,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   paymentBoxes.forEach((box) => {
     box.addEventListener("click", handleClick);
+  });
+});
+//========================================================================================================================================================
+//place order show product list
+document.addEventListener("DOMContentLoaded", function () {
+  const finalOrderMobile = document.querySelector(".final__order.mobile");
+  const finalOrderArrow = document.querySelector(".final__order-arrow");
+  const finalOrderInner = document.querySelector(".final__order-inner");
+  const changeText = document.querySelector(".order-text-change");
+  finalOrderMobile.addEventListener("click", function () {
+    finalOrderMobile.classList.toggle("active");
+    finalOrderArrow.classList.toggle("active");
+    finalOrderInner.classList.toggle("active");
+    if (finalOrderMobile.classList.contains("active")) {
+      changeText.textContent = "Закрити замовлення";
+    } else {
+      changeText.textContent = "Відкрити замовлення";
+    }
   });
 });
