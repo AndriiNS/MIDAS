@@ -1667,10 +1667,16 @@ header {
 .final__order.mobile {
   display: none;
 }
+.footer__menu-mobile {
+  display: none;
+}
 /* #region adaptive tablet 768px */
 @media (max-width: 968px) {
   .header {
     padding: 10rem 4rem;
+  }
+  .footer__menu-mobile {
+    display: block;
   }
   .mobile-nav {
     display: block;
